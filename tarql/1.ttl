@@ -4,13 +4,13 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 
-<1.tarql> a tmp:MappingFile .
+<1.sparql> a tmp:MappingFile .
 
 
 <#this> a tmp:MappingDescription ;
 	rdfs:label "MarktStammdaten hydro to OEO" ;
 	rdfs:comment "testing" ;
-	tmp:hasMappingFile <1.tarql> ;
+	tmp:hasMappingFile <1.sparql> ;
 
 
 

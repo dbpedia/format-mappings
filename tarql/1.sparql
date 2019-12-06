@@ -1,0 +1,20 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rli: <http://data.rli.de/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT {
+?rliMastrSubject a rli:bnetza-mastr_type;
+	dbo:Name ?Name;
+	rli:hydro_einheitart ?Einheitart;
+	rli:Id ?numId;
+	rli:timestamp ?timestampBinded;
+	rli:version ?versionBinded;
+}
+WHERE {
+	BIND(URI(CONCAT('http://data.rli.de/ontology/',?EinheitMastrNummer)) AS ?rliMastrSubject)
+	BIND(xsd:integer(?id) AS ?numId)
+	BIND(xsd:datetime(?timestamp) AS ?timestampBinded)
+	BIND(xsd:decimal(?version) AS ?versionBinded)
+}
