@@ -1,0 +1,27 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix tmp: <http://tmp-namespace.org/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+
+<1.tarql> a tmp:MappingFile .
+
+
+<#this> a tmp:MappingDescription ;
+	rdfs:label "MarktStammdaten hydro to OEO" ;
+	rdfs:comment "testing" ;
+	tmp:hasMappingFile <1.tarql> ;
+
+
+
+	# thinking about this, but maybe can be generated insted of manually given
+	tmp:testedVersion "01.04.00"^^xsd:string ; 	
+	
+	 
+	# how it should look like: artifact and file
+	# that way artifact and file names are stable
+	tmp:mainArtifact <https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr> ;
+	tmp:mainFile "bnetza-mastr_rli_type=hydro.csv.bz2" ;
+	# how it looks like at the moment
+	tmp:databusFixRequired <https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr/01.04.00/bnetza-mastr_rli_type=hydro.csv.bz2> .
+	
