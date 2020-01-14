@@ -4,7 +4,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 
-<1.sparql> a tmp:MappingFile .
+<1.sparql> a tmp:MappingFile ;
+	tmp:hasDelimiter ";" ;
+	tmp:hasQuotation "null" ;
 
 
 <#this> a tmp:MappingDescription ;
