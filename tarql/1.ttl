@@ -6,7 +6,7 @@
 
 <1.sparql> a tmp:MappingFile ;
 	tmp:hasDelimiter ";" ;
-	tmp:hasQuotation "null" ;
+	tmp:hasQuotation "null" .
 
 
 <#this> a tmp:MappingDescription ;
