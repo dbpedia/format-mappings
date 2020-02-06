@@ -6,7 +6,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 CONSTRUCT {
 ?mastersubject a dbo:District ;
-	dbo:name ?name
+	dbo:name ?name ;
 }
 WHERE {
 	BIND(URI(CONCAT('http://dbpedia.org/global/kurzum/',?Código_Município_Completo)) AS ?mastersubject)
