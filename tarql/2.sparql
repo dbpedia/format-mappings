@@ -9,6 +9,6 @@ CONSTRUCT {
 	dbo:name ?name ;
 }
 WHERE {
-	BIND(URI(CONCAT('http://dbpedia.org/global/kurzum/',?Código_Município_Completo)) AS ?mastersubject)
+	BIND(URI(CONCAT('http://dbpedia.org/global/test/',?Código_Município_Completo)) AS ?mastersubject)
 	BIND(xsd:string(?Nome_Município) AS ?name)
 }
