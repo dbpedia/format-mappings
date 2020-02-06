@@ -1,0 +1,14 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rli: <http://data.rli.de/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT {
+?mastersubject a dbo:District ;
+	dbo:name ?name
+}
+WHERE {
+	BIND(URI(CONCAT('http://dbpedia.org/global/kurzum/',?Código_Município_Completo)) AS ?mastersubject)
+	BIND(xsd:string(?Nome_Município) AS ?name)
+}

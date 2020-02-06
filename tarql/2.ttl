@@ -1,0 +1,29 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix tmp: <http://tmp-namespace.org/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+
+<2.sparql> a tmp:MappingFile .
+
+
+<#this> a tmp:MappingDescription ;
+	rdfs:label "Mapping demo IBGE" ;
+	rdfs:comment "testing" ;
+	tmp:hasMappingFile <2.sparql> ;
+	tmp:hasDelimiter "," ;
+	tmp:hasQuotation "null" ;
+
+
+
+	# thinking about this, but maybe can be generated insted of manually given
+	tmp:testedVersion "2018.01.01"^^xsd:string ; 	
+	
+	 
+	# how it should look like: artifact and file
+	# that way artifact and file names are stable
+	tmp:mainArtifact <https://databus.dbpedia.org/kurzum/ibge/dtb> ;
+	tmp:mainFile "dtb_type=municipio.csv" ;
+	# how it looks like at the moment
+	tmp:databusFixRequired <https://databus.dbpedia.org/kurzum/ibge/dtb/2018.01.01/dtb_type=municipio.csv> .
+	
