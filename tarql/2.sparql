@@ -7,8 +7,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 CONSTRUCT {
 ?mastersubject a dbo:District ;
 	dbo:name ?name ;
+	owl:sameAs ?sameAs ;
 }
 WHERE {
 	BIND(URI(CONCAT('http://dbpedia.org/global/test/',?Código_Município_Completo)) AS ?mastersubject)
+	BIND(URI(CONCAT('http://pt.dbpedia.org/resource/',?Nome_Município)) AS ?sameAs)
 	BIND(xsd:string(?Nome_Município) AS ?name)
 }
