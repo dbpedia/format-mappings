@@ -6,13 +6,14 @@ PREFIX oeo: <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 CONSTRUCT {
-?rliMastrSubject a rli:bnetza-mastr_type;
+?rliMastrSubject a rli:bnetza-mastr_type; a oeo:ElectricityProductionUnit
 	dbo:Name ?Name;
-	rli:hydro_einheitart ?Einheitart;
+	rli:einheitart ?Einheitart;
 	rli:Id ?numId;
 	rli:timestamp ?timestampBinded;
 	rli:version ?versionBinded;
-		   
+	
+	#new for wind
 	oeo:Longitude ?LaengengradB ;
 	oeo:Latitude ?BreitengradB ;
 	oeo:FederalState ?BundeslandB ;
@@ -25,8 +26,7 @@ CONSTRUCT {
 	oeo:put_into_operation ?InbetriebnahmedatumB ;
 	oeo:located_at ?LageB ;
 	oeo:OperationStatus ?EinheitBetriebsstatusB ;
-	oeo:RequierementSwitchOffPowerLimitation ?AuflageAbschaltungLeistungsbegrenzungB .
-		   
+	oeo:RequierementSwitchOffPowerLimitation ?AuflageAbschaltungLeistungsbegrenzungB .	   
 }
 WHERE {
 	BIND(URI(CONCAT('http://mastr.rli.de/entity/',?EinheitMastrNummer)) AS ?rliMastrSubject)
