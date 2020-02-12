@@ -1,7 +1,8 @@
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX dbr: <http://dbpedia.org/resource/>
 PREFIX dbo: <http://dbpedia.org/ontology/>
-PREFIX rli: <http://data.rli.de/ontology/>
+PREFIX mri: <http://data.rli.de/ontology/> 
+PREFIX oeo: <http://openenergy-platform.org/ontology/v0.0.1/oeo/> 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 CONSTRUCT {
@@ -11,10 +12,40 @@ CONSTRUCT {
 	rli:Id ?numId;
 	rli:timestamp ?timestampBinded;
 	rli:version ?versionBinded;
+		   
+	oeo:Longitude ?LaengengradB ;
+	oeo:Latitude ?BreitengradB ;
+	oeo:FederalState ?BundeslandB ;
+	oeo:County ?LandkreisB ;
+	oeo:Postalcode ?PostleitzahlB ;
+	oeo:CommunityKey ?GemeindeschluesselB ;
+	oeo:Community ?GemeindeB ;
+	oeo:GrossCapacity ?BruttoleistungB ;
+	oeo:EnergyCarrier ?EnergietraegerB ;
+	oeo:put_into_operation ?InbetriebnahmedatumB ;
+	oeo:located_at ?LageB ;
+	oeo:OperationStatus ?EinheitBetriebsstatusB ;
+	oeo:RequierementSwitchOffPowerLimitation ?AuflageAbschaltungLeistungsbegrenzungB .
+		   
 }
 WHERE {
-	BIND(URI(CONCAT('http://data.rli.de/ontology/',?EinheitMastrNummer)) AS ?rliMastrSubject)
+	BIND(URI(CONCAT('http://mastr.rli.de/entity/',?EinheitMastrNummer)) AS ?rliMastrSubject)
 	BIND(xsd:integer(?id) AS ?numId)
 	BIND(xsd:datetime(?timestamp) AS ?timestampBinded)
 	BIND(xsd:decimal(?version) AS ?versionBinded)
+	
+	#new for wind
+	BIND(xsd:decimal(?Laengengrad) AS ?LaengengradB)
+	BIND(xsd:decimal(?Breitengrad) AS ?BreitengradB)
+	BIND(xsd:string(?Bundesland) AS ?BundeslandB)
+	BIND(xsd:string(?Landkreis) AS ?LandkreisB)
+	BIND(xsd:integer(?Postleitzahl) AS ?PostleitzahlB)
+	BIND(xsd:integer(?Gemeindeschluessel) AS ?GemeindeschluesselB)
+	BIND(xsd:string(?Gemeinde) AS ?GemeindeB)
+	BIND(xsd:integer(?Bruttoleistung) AS ?BruttoleistungB)
+	BIND(xsd:string(?Energietraeger) AS ?EnergietraegerB)
+	BIND(xsd:date(?Inbetriebnahmedatum) AS ?InbetriebnahmedatumB)
+	BIND(xsd:string(?Lage) AS ?LageB)
+	BIND(xsd:string(?EinheitBetriebsstatus) AS ?EinheitBetriebsstatusB)
+	BIND(xsd:string(?AuflageAbschaltungLeistungsbegrenzung) AS ?AuflageAbschaltungLeistungsbegrenzungB)
 }
