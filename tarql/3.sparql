@@ -1,7 +1,7 @@
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX dbr: <http://dbpedia.org/resource/>
 PREFIX dbo: <http://dbpedia.org/ontology/>
-PREFIX mri: <http://data.rli.de/ontology/> 
+PREFIX rli: <http://data.rli.de/ontology/> 
 PREFIX oeo: <http://openenergy-platform.org/ontology/v0.0.1/oeo/> 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
