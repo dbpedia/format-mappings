@@ -6,8 +6,7 @@ PREFIX oeo: <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 CONSTRUCT {
-?rliMastrSubject a rli:bnetza-mastr_type; 
-		 a oeo:ElectricityProductionUnit;
+?rliMastrSubject a oeo:ElectricityProductionUnit;
 	dbo:Name ?Name;
 	rli:einheitart ?Einheitart;
 	rli:Id ?numId;
