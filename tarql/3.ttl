@@ -12,7 +12,7 @@
 	rdfs:comment "testing only partial mapping" ;
 	tmp:hasMappingFile <3.sparql> ;
 	tmp:hasDelimiter ";" ;
-	tmp:hasQuotation "\"" ;
+	tmp:hasQuotation '"' ;
 
 
 
