@@ -12,6 +12,7 @@ CONSTRUCT {
 	rli:Id ?numId;
 	rli:timestamp ?timestampBinded;
 	rli:version ?versionBinded;
+	rli:CsvRowNum ?rowNumB; 
 	
 	#new for wind
 	oeo:Longitude ?LaengengradB ;
@@ -33,6 +34,7 @@ WHERE {
 	BIND(xsd:integer(?id) AS ?numId)
 	BIND(xsd:datetime(?timestamp) AS ?timestampBinded)
 	BIND(xsd:decimal(?version) AS ?versionBinded)
+	BIND (URI(CONCAT('companies/', STR(?ROWNUM))) AS ?rowNumB)
 	
 	#new for wind
 	BIND(xsd:decimal(?Laengengrad) AS ?LaengengradB)
