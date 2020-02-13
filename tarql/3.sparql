@@ -34,7 +34,7 @@ WHERE {
 	BIND(xsd:integer(?id) AS ?numId)
 	BIND(xsd:datetime(?timestamp) AS ?timestampBinded)
 	BIND(xsd:decimal(?version) AS ?versionBinded)
-	BIND(STR(?ROWNUM)) AS ?rowNumB)
+	BIND(STR(?ROWNUM) AS ?rowNumB)
 	
 	#new for wind
 	BIND(xsd:decimal(?Laengengrad) AS ?LaengengradB)
