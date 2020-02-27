@@ -14,15 +14,13 @@
 	tmp:hasDelimiter ";" ;
 	tmp:hasQuotation '\"' ;
 
-
-
 	# thinking about this, but maybe can be generated insted of manually given
 	tmp:testedVersion "01.04.00"^^xsd:string ; 	
-	
-	 
+		 
 	# how it should look like: artifact and file
 	# that way artifact and file names are stable
 	tmp:mainArtifact <https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr> ;
 	tmp:mainFile "bnetza-mastr_rli_type=wind.csv.bz2" ;
 	# how it looks like at the moment
 	tmp:databusFixRequired <https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr/01.04.00/bnetza-mastr_rli_type=wind.csv.bz2> .
+	tmp:databusFixRequired <https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr/01.04.00/bnetza-mastr_rli_type=biomass.csv.bz2> .
