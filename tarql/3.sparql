@@ -6,7 +6,7 @@ PREFIX oeo: <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 CONSTRUCT {
-?rliMastrSubject a oeo:ElectricityProductionUnit;
+?rliMastrSubject a oeo:ElectricityProductionUnit; a ?OeoClass;
 	dbo:Name ?Name;
 	rli:einheitart ?Einheitart;
 	rli:Id ?numId;
@@ -51,8 +51,9 @@ WHERE {
 	BIND(xsd:string(?EinheitBetriebsstatus) AS ?EinheitBetriebsstatusB)
 	BIND(xsd:string(?AuflageAbschaltungLeistungsbegrenzung) AS ?AuflageAbschaltungLeistungsbegrenzungB)
 	
+	## class mapping
 	BIND(xsd:string(?Einheittyp) AS ?EinheittypB)
 	BIND(
-		IF(?EinheittypB = "Windeinheit", oeo:Energy,
-		IF(?EinheittypB = "Biomasse", oeo:Energy,owl:Thing)) as ?OeoClass)
+		IF(?EinheittypB = "Windeinheit", oeo:Windmill,
+		IF(?EinheittypB = "Biomasse", oeo:Biomass,owl:Thing)) as ?OeoClass)
 }
