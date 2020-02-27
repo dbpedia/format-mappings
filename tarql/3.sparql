@@ -27,7 +27,7 @@ CONSTRUCT {
 	oeo:put_into_operation ?InbetriebnahmedatumB ;
 	oeo:located_at ?LageB ;
 	oeo:OperationStatus ?EinheitBetriebsstatusB ;
-	oeo:RequierementSwitchOffPowerLimitation ?AuflageAbschaltungLeistungsbegrenzungB .	   
+	oeo:RequierementSwitchOffPowerLimitation ?AuflageAbschaltungLeistungsbegrenzungB .	
 }
 WHERE {
 	BIND(URI(CONCAT('http://mastr.rli.de/entity/',?EinheitMastrNummer)) AS ?rliMastrSubject)
@@ -50,4 +50,9 @@ WHERE {
 	BIND(xsd:string(?Lage) AS ?LageB)
 	BIND(xsd:string(?EinheitBetriebsstatus) AS ?EinheitBetriebsstatusB)
 	BIND(xsd:string(?AuflageAbschaltungLeistungsbegrenzung) AS ?AuflageAbschaltungLeistungsbegrenzungB)
+	
+	BIND(xsd:string(?Einheittyp) AS ?EinheittypB)
+	BIND(
+		IF(?EinheittypB = "Windeinheit", oeo:Energy,
+		IF(?EinheittypB = "Biomasse", oeo:Energy,owl:Thing)) as ?OeoClass)
 }
