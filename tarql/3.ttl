@@ -22,5 +22,5 @@
 	tmp:mainArtifact <https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr> ;
 	tmp:mainFile "bnetza-mastr_rli_type=wind.csv.bz2" ;
 	# how it looks like at the moment
-	tmp:databusFixRequired <https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr/01.04.00/bnetza-mastr_rli_type=wind.csv.bz2> .
+	tmp:databusFixRequired <https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr/01.04.00/bnetza-mastr_rli_type=wind.csv.bz2> ;
 	tmp:databusFixRequired <https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr/01.04.00/bnetza-mastr_rli_type=biomass.csv.bz2> .
