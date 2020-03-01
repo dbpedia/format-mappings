@@ -11,5 +11,5 @@ jobs:
         with:
           java-version: 11
       - uses: imas/setup-rdflint@v1
-      - run: rdflint -config rdflint-config.yml
+      - run: rdflint
     
