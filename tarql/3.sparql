@@ -30,13 +30,13 @@ CONSTRUCT {
 	oeo:RequierementSwitchOffPowerLimitation ?AuflageAbschaltungLeistungsbegrenzungB .	
 }
 WHERE {
+	## select columns of interest and define datatype
 	BIND(URI(CONCAT('http://mastr.rli.de/entity/',?EinheitMastrNummer)) AS ?rliMastrSubject)
 	BIND(xsd:integer(?id) AS ?numId)
 	BIND(xsd:datetime(?timestamp) AS ?timestampBinded)
 	BIND(xsd:decimal(?version) AS ?versionBinded)
 	BIND(STR(?ROWNUM) AS ?rowNumB)
 	
-	#new for wind
 	BIND(xsd:decimal(?Laengengrad) AS ?LaengengradB)
 	BIND(xsd:decimal(?Breitengrad) AS ?BreitengradB)
 	BIND(xsd:string(?Bundesland) AS ?BundeslandB)
@@ -57,5 +57,5 @@ WHERE {
 		IF(?EinheittypB = "Windeinheit", oeo:WindElectricityGenerator ,
 		IF(?EinheittypB = "Biomasse",    oeo:BioElectricityGenerator  ,
 		IF(?EinheittypB = "Wasser",    	 oeo:WaterElectricityGenerator  ,
-		   owl:Thing)) as ?OeoClass)
+		   owl:Thing))) as ?OeoClass)
 }
