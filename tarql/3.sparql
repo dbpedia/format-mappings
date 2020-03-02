@@ -56,5 +56,6 @@ WHERE {
 	BIND(
 		IF(?EinheittypB = "Windeinheit", oeo:WindElectricityGenerator ,
 		IF(?EinheittypB = "Biomasse",    oeo:BioElectricityGenerator  ,
+		IF(?EinheittypB = "Wasser",    	 oeo:WaterElectricityGenerator  ,
 		   owl:Thing)) as ?OeoClass)
 }
