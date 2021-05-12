@@ -10,7 +10,7 @@
 <#this> a tmp:MappingDescription ;
 	rdfs:label "MarktStammdatenRegister to OEO" ;
 	rdfs:comment "partial mapping to legacy version of OEO" ;
-	tmp:hasMappingFile <3.sparql> ;
+	tmp:hasMappingFile <4.sparql> ;
 	tmp:hasDelimiter ";" ;
 	tmp:hasQuotation '\"' ;
 
