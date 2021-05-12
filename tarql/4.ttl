@@ -11,7 +11,7 @@
 	rdfs:label "MarktStammdatenRegister to OEO" ;
 	rdfs:comment "partial mapping to legacy version of OEO" ;
 	tmp:hasMappingFile <4.sparql> ;
-	tmp:hasDelimiter ";" ;
+	tmp:hasDelimiter "," ;
 	tmp:hasQuotation '\"' ;
 
 	tmp:databusFixRequired <https://databus.dbpedia.org/jj-author/mastr/bnetza-mastr/2021.05.03/bnetza-mastr_type=hydro_cleaned.csv.bz2> ;
