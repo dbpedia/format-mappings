@@ -4,7 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 
-<3.sparql> a tmp:MappingFile .
+<4.sparql> a tmp:MappingFile .
 
 
 <#this> a tmp:MappingDescription ;
