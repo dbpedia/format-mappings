@@ -44,7 +44,7 @@ WHERE {
 	BIND(xsd:integer(?Postleitzahl) AS ?PostleitzahlB)
 	BIND(xsd:integer(?Gemeindeschluessel) AS ?GemeindeschluesselB)
 	BIND(xsd:string(?Gemeinde) AS ?GemeindeB)
-	BIND(xsd:double(?Bruttoleistung) AS ?BruttoleistungB)
+	BIND(xsd:decimal(?Bruttoleistung) AS ?BruttoleistungB)
 	BIND(xsd:string(?Energietraeger) AS ?EnergietraegerB)
 	BIND(xsd:date(?Inbetriebnahmedatum) AS ?InbetriebnahmedatumB)
 	BIND(xsd:string(?Lage) AS ?LageB)
