@@ -46,7 +46,7 @@ WHERE {
 	BIND(xsd:string(?Gemeinde) AS ?GemeindeB)
 	BIND(xsd:decimal(?Bruttoleistung) AS ?BruttoleistungB)
 	BIND(xsd:string(?Energietraeger) AS ?EnergietraegerB)
-	BIND(xsd:date(STRBEFORE((?Inbetriebnahmedatum," ")) AS ?InbetriebnahmedatumB)
+	BIND(xsd:date(STRBEFORE(?Inbetriebnahmedatum," ")) AS ?InbetriebnahmedatumB)
 	BIND(xsd:string(?Lage) AS ?LageB)
 	BIND(xsd:string(?EinheitBetriebsstatus) AS ?EinheitBetriebsstatusB)
 	BIND(xsd:string(?AuflageAbschaltungLeistungsbegrenzung) AS ?AuflageAbschaltungLeistungsbegrenzungB)
