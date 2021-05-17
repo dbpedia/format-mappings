@@ -9,9 +9,10 @@ CONSTRUCT {
 ?rliMastrSubject a ?OeoClass;
 	dbo:Name ?Name;
 	rli:einheitart ?Einheitart;
+	rli:einheittyp ?EinheittypB;
 	rli:Id ?numId;
-	rli:timestamp ?timestampBinded;
-	rli:version ?versionBinded;
+	rli:timestamp ?timestampB;
+	rli:version ?versionB;
 	rli:CsvRowNum ?rowNumB; 
 	
 	#new for wind
@@ -27,14 +28,14 @@ CONSTRUCT {
 	oeo:put_into_operation ?InbetriebnahmedatumB ;
 	oeo:located_at ?LageB ;
 	oeo:OperationStatus ?EinheitBetriebsstatusB ;
-	oeo:RequierementSwitchOffPowerLimitation ?AuflageAbschaltungLeistungsbegrenzungB .	
+	oeo:RequirementSwitchOffPowerLimitation ?AuflageAbschaltungLeistungsbegrenzungB .	
 }
 WHERE {
 	## select columns of interest and define datatype
 	BIND(URI(CONCAT('http://mastr.rli.de/entity/',?EinheitMastrNummer)) AS ?rliMastrSubject)
 	BIND(xsd:integer(?id) AS ?numId)
-	BIND(xsd:datetime(?timestamp) AS ?timestampBinded)
-	BIND(xsd:decimal(?version) AS ?versionBinded)
+	BIND(xsd:datetime(?timestamp) AS ?timestampB)
+	BIND(xsd:decimal(?version) AS ?versionB)
 	BIND(STR(?ROWNUM) AS ?rowNumB)
 	
 	BIND(xsd:decimal(?Laengengrad) AS ?LaengengradB)
