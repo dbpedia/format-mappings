@@ -55,8 +55,8 @@ WHERE {
 	## class mapping
 	BIND(xsd:string(?Einheittyp) AS ?EinheittypB)
 	BIND(
-		IF(?EinheittypB = "Windeinheit", oeo:WindElectricityGenerator ,
-		IF(?EinheittypB = "Biomasse",    oeo:BioElectricityGenerator  ,
-		IF(?EinheittypB = "Wasser",    	 oeo:WaterElectricityGenerator  ,
-		   owl:Thing))) as ?OeoClass)
+		IF(?EinheittypB = "Windeinheit", <http://openenergy-platform.org/ontology/oeo/OEO_00000448> ,
+		IF(?EinheittypB = "Biomasse",    <http://openenergy-platform.org/ontology/oeo/OEO_00000037> ,
+		IF(?EinheittypB = "Wasser",    	 <http://openenergy-platform.org/ontology/oeo/OEO_00000442> ,
+		   <http://openenergy-platform.org/ontology/oeo/OEO_00000334>))) as ?OeoClass)
 }
