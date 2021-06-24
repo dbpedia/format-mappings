@@ -3,9 +3,9 @@
 @prefix map: <databus-client.tools.dbpedia.org/vocab/mapping/>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<1.sparql> a tmp:MappingFile .
+<1.sparql> a map:MappingFile .
 
-<#this> a tmp:MappingDescription ;
+<#this> a map:MappingDescription ;
 	rdfs:label "MarktStammdaten hydro to OEO" ;
 	rdfs:comment "testing" ;
 	map:hasMappingFile <1.sparql> ;
