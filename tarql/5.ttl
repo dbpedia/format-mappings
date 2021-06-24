@@ -1,0 +1,23 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix map: <databus-client.tools.dbpedia.org/vocab/mapping/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<1.sparql> a tmp:MappingFile .
+
+<#this> a tmp:MappingDescription ;
+	rdfs:label "MarktStammdaten hydro to OEO" ;
+	rdfs:comment "testing" ;
+	map:hasMappingFile <1.sparql> ;
+	map:hasDelimiter ";" ;
+	map:hasQuotation "null" ;
+	 
+	# that way artifact and file names are stable
+	map:artifact <https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr> ;
+	map:file "bnetza-mastr_rli_type=hydro.csv.bz2" ;
+
+	# that way mapping only works for specific version
+	map:versionedFile <https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr/01.04.00/bnetza-mastr_rli_type=hydro.csv.bz2> ;
+
+	# thinking about this, but maybe can be generated instead of manually given
+	map:testedVersion "01.04.00"^^xsd:string .
