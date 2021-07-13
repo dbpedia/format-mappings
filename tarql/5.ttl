@@ -1,6 +1,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
-@prefix map: <databus-client.tools.dbpedia.org/vocab/mapping/>.
+@prefix map: <http://databus-client.tools.dbpedia.org/vocab/mapping/>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 <1.sparql> a map:MappingFile .
