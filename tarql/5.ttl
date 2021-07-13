@@ -16,6 +16,7 @@
 	map:artifact <https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr> ;
 	map:fileName "bnetza-mastr_rli_type=hydro.csv.bz2" ;
         map:fileID "bnetza-mastr_rli_type=hydro.csv.bz2" ;
+        map:selectionQuery """bnetza-mastr_rli_type=hydro.csv.bz2""" ;
 
 	# that way mapping only works for specific version
 	map:versionedFile <https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr/01.04.00/bnetza-mastr_rli_type=hydro.csv.bz2> ;
