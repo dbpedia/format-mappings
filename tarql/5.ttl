@@ -12,14 +12,15 @@
 	map:hasDelimiter ";" ;
 	map:hasQuotation "null" ;
 	 
-	# that way artifact and file names are stable
+	# Option 1: artifact and file names are stable
 	map:artifact <https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr> ;
 	map:fileName "bnetza-mastr_rli_type=hydro.csv.bz2" ;
-        map:versionedFile <https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr/01.04.00/bnetza-mastr_rli_type=hydro.csv.bz2> ;
-        map:selectionQuery """bnetza-mastr_rli_type=hydro.csv.bz2""" ;
 
-	# that way mapping only works for specific version
-	map:versionedFile <> ;
+	# Option 2: works for specific version of a file
+	map:versionedFile <https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr/01.04.00/bnetza-mastr_rli_type=hydro.csv.bz2> ;
+
+	# Option 3: works for all files that result from a query
+	map:selectionQuery """bnetza-mastr_rli_type=hydro.csv.bz2""" ;
 
 	# thinking about this, but maybe can be generated instead of manually given
 	map:testedVersion "01.04.00"^^xsd:string .
