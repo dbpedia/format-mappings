@@ -6,17 +6,17 @@
 <1.sparql> a map:MappingFile .
 
 <#this> a map:MappingDescription ;
-	rdfs:label "MarktStammdaten hydro to OEO" ;
-	rdfs:comment "testing" ;
+	rdfs:label "MaStR Open Energy Ontology Mapping Demo" ;
+	rdfs:comment "this demo shows all available options that can be queried" ;
 	map:hasMappingFile <1.sparql> ;
 	map:hasDelimiter ";" ;
 	map:hasQuotation "null" ;
 	 
-	# Option 1: artifact and file names are stable
+	# Option 1: artifact and file names are stable 
 	map:artifact <https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr> ;
 	map:fileName "bnetza-mastr_rli_type=hydro.csv.bz2" ;
 
-	# Option 2: works for specific version of a file
+	# Option 2: works for a specific version of a file
 	map:versionedFile <https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr/01.04.00/bnetza-mastr_rli_type=hydro.csv.bz2> ;
 
 	# Option 3: works for all files that result from a query
